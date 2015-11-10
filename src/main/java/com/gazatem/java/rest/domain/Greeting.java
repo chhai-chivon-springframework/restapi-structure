@@ -1,4 +1,4 @@
-package com.gazatem.java.rest;
+package com.gazatem.java.rest.domain;
 public class Greeting {
 
     private final long id;

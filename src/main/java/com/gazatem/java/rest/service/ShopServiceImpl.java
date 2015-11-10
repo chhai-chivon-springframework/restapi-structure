@@ -1,5 +1,7 @@
-package com.gazatem.java.rest;
+package com.gazatem.java.rest.service;
 
+import com.gazatem.java.rest.domain.Shop;
+import com.gazatem.java.rest.repository.ShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,5 +1,8 @@
-package com.gazatem.java.rest;
+package com.gazatem.java.rest.controller;
 
+import com.gazatem.java.rest.Greeting;
+import com.gazatem.java.rest.Shop;
+import com.gazatem.java.rest.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 

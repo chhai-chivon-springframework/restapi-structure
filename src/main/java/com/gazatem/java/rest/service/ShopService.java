@@ -1,4 +1,4 @@
-package com.gazatem.java.rest;
+package com.gazatem.java.rest.service;
 
 import java.util.*;
 
