@@ -1,13 +1,13 @@
-package com.gazatem.java.rest.domain;
+package com.gazatem.java.rest.model;
 
-import javax.persistence.*;
+import com.gazatem.java.rest.domain.Author;
 
-@Entity
-@Table(name = "books")
-public class Book {
+import java.io.Serializable;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class BookDetails implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private Long id;
 
     private String title;
@@ -18,20 +18,7 @@ public class Book {
 
     private int quantity;
 
-    @ManyToOne(cascade = CascadeType.ALL, optional = true)
-    @JoinColumn(name = "author_id", nullable = true)
     private Author author;
-
-    public Book(String title, String summary, double price, int quantity, Author author) {
-        this.title = title;
-        this.summary = summary;
-        this.price = price;
-        this.quantity = quantity;
-        this.author = author;
-    }
-
-    public Book() {
-    }
 
     public Long getId() {
         return id;
@@ -79,5 +66,16 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "BookDetails{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", summary='" + summary + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
     }
 }
